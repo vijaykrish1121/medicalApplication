@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A modern HTML and Tailwind CSS starter template by 7angle">
+  <meta name="keywords" content="HTML, Tailwind CSS, starter, template, 7angle">
+  <meta name="author" content="7angle">
+  <meta property="og:title" content="7angle - HTML + Tailwind CSS Starter">
+  <meta property="og:description" content="A modern HTML and Tailwind CSS starter template by 7angle">
+  <meta property="og:image" content="./7angle-logo.svg">
+  <meta property="og:image" content="./download-logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>7 Angle - HTML + Tailwind CSS Starter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            gradient: 'gradient 3s ease-in-out infinite',
+          },
+          keyframes: {
+            gradient: {
+              '0%, 100%': {
+                'background-size': '200% 200%',
+                'background-position': 'left center'
+              },
+              '50%': {
+                'background-size': '200% 200%',
+                'background-position': 'right center'
+              }
+            },
+          },
+          screens: {
+  sm: '640px',   // Small screens (e.g., large phones)
+  md: '768px',   // Medium screens (e.g., tablets)
+  lg: '1024px',  // Large screens (e.g., laptops)
+  xl: '1280px',  // Extra-large screens (e.g., desktops)
+  '2xl': '1536px' // 2X large screens (e.g., large desktops)
+},
+        }
+      }
+    }
+  </script>
+</head>
+<body class="p-0 m-0 ">
+  <div class="min-h-screen">
+    <div class="flex-grow">
+ <!---HERO SECTION-->
+ <div class="relative w-full h-[700px] overflow-hidden">
+  <!-- Top Left Background -->
+  <div class= " lg:bg-[#B2E3FF] absolute rounded-br-[70px] 
+              w-[60px]  md:w-[100px] lg:w-[120px] 
+              h-[60px]  md:h-[100px] lg:h-[150px] 
+              top-0 left-0 z-0">
+  </div>
+
+  <!-- Top Right Background -->
+  <div class="lg:bg-[#B2E3FF] absolute top-0 right-0 
+              w-[300px]  md:w-[400px] lg:w-[570px] 
+              h-[300px]  md:h-[500px] lg:h-[580px] 
+              rounded-bl-[20%] 
+              bg-none sm:bg-[#B2E3FF]
+               z-0 ">
+  </div>
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="flex justify-between items-center py-4 z-10">
+      <!-- Logo on the left -->
+      <div class="text-2xl font-bold text-[#23A6F0]">Medicine</div>
+  
+      <!-- Desktop Menu (Centered) -->
+      <div class="hidden lg:flex justify-center flex-grow">
+        <ul class="flex space-x-8">
+          <li><a href="#" class="text-gray-700 hover:text-[#23A6F0] transition">Home</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-[#23A6F0] transition">About</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-[#23A6F0] transition">Services</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-[#23A6F0] transition">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Buttons on the right -->
+      <div class="hidden lg:flex space-x-4">
+        <button class="px-4 py-2 bg-[#23A6F0] text-white rounded-md hover:bg-[#23A6F0] transition">
+          Login
+        </button>
+        <button class="px-4 py-2 border border-[#23A6F0] text-[#23A6F0] rounded-md hover:bg-[#23A6F0] hover:text-white transition">
+          Join Us
+        </button>
+      </div>
+  
+      <!-- Mobile Menu Toggle Button -->
+      <button id="menuToggle" class="block lg:hidden text-gray-700 focus:outline-none">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Dropdown Menu -->
+    <div id="dropdown" class="hidden absolute right-0 top-full mt-2 bg-white shadow-lg rounded-md w-72 py-2 z-20  justify-center items-center">
+      <div class="flex flex-col items-center w-full">
+        <a href="#" class="text-gray-700 hover:text-[#23A6F0] space-x-2 px-4 py-2"><i class="fa-solid fa-arrow-right"></i> Home</a>
+        <a href="#" class="text-gray-700 hover:text-[#23A6F0] space-x-2 px-4 py-2"><i class="fa-solid fa-arrow-right"></i> About</a>
+        <a href="#" class="text-gray-700 hover:text-[#23A6F0] space-x-2 px-4 py-2"><i class="fa-solid fa-arrow-right"></i> Services</a>  
+        <a href="#" class="text-gray-700 hover:text-[#23A6F0] space-x-2 px-4 py-2"><i class="fa-solid fa-arrow-right"></i> Contact</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Content Overlaying Background -->
+  <div class="mt-20 relative   flex flex-col md:flex-row justify-between items-center  md:px-16 my-10 gap-y-10 max-w-7xl mx-auto">
+    <!-- Left Section -->
+    <div class="text-center md:text-left">
+      <p class="text-[#23A6F0] font-bold text-[18px] ">Welcome</p>
+      <h1 class="text-[#252B42] font-bold text-[45px] md:text-[65px] mb-4 leading-tight">Online <br> Appointment</h1>
+      <p class="text-[#737373] text-[16px] md:text-[20px] mb-4">Medical Functional is most focused in helping you<br>discover your beautiful smile most</p>
+      <div class="flex justify-center md:justify-start gap-x-4">
+        <button class="px-6 py-2 rounded-md text-white bg-[#23A6F0]">Get Quotes Now</button>
+        <button class="px-6 py-2 rounded-md text-white bg-[#23A6F0]">Learn More</button>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="relative w-full max-w-lg h-[400px] lg:h-[500px] md:h-[700px]">
+      <!-- Main Hero Image -->
+      <img src=".vscode/images/HeroSectionImg/HeroImage.png" 
+           alt="Main Hero Image" 
+           class="absolute top-[13rem] left-[22rem] transform -translate-y-1/2 -translate-x-1/2 w-[230px] sm:w-[450px] md:w-[400px] lg:w-[350px] lg:h-[500px] object-contain">
+
+      <!-- First Animated Image (Top Left of Background) -->
+      <img src=".vscode/images/HeroSectionImg/HeroImage3.png" 
+           alt="Floating Image 1" 
+           class="absolute top-6 left-0 sm:top-8 sm:left-8 lg:top-16 lg:left-16 lg:animate- w-[80px] sm:w-[120px] md:w-[150px] lg:w-[200px] z-20">
+
+      <!-- Second Animated Image (Bottom Left of Background) -->
+      <img src=".vscode/images/HeroSectionImg/HeroImage2.png" 
+           alt="Floating Image 2" 
+           class="absolute bottom-10 left-0 sm:bottom-12 sm:left-10 lg:bottom-20 lg:left-16 lg:animate- w-[100px] sm:w-[160px] md:w-[200px] lg:w-[320px] z-20">
+    </div>
+  </div>
+</div>
+  <!---OUR ACTIVITY-->
+  <div class="my-10 px-4 lg:px-[4rem] md:px-10 max-w-7xl mx-auto lg:mt-28">
+    <div class="text-center lg:text-left my-10 lg:my-20">
+      <p class="text-[#23A6F0] font-bold text-[18px]">Practice Advice</p>
+      <p class="text-[#252B42] font-bold text-[30px] md:text-[45px] mb-2">Our Activity</p>
+      <p class="text-[#737373] text-[16px] md:text-[20px] mb-4">Problems trying to resolve the conflict between 
+         <br>the two major realms of Classical physics: Newtonian mechanics 
+      </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+         <!-- card--1 -->
+         <div class="w-full md:w-[45%] lg:w-[350px] h-[300px] bg-white shadow-md p-6 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300">
+          <img src=".vscode/images/OurActivityImg/005-phone-1.png" alt="" class="mb-4">
+          <p class="text-lg font-bold text-[#252B42] text-center">Emergency Case</p>
+          <p class="w-20 h-1 bg-[#E74040] my-2"></p>
+          <p class="text-[#737373] text-[14px] md:text-[16px] text-center">
+            The gradual <br>
+            accumulation of <br>
+            information about
+          </p>
+        </div>
+        <!-- card--2 -->
+        <div class="w-full md:w-[45%] lg:w-[350px] h-[300px] bg-white shadow-md p-6 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300">
+          <img src=".vscode/images/OurActivityImg/006-heart-rate.png" alt="" class="mb-4">
+          <p class="text-lg font-bold text-[#252B42] text-center">Emergency Case</p>
+          <p class="w-20 h-1 bg-[#E74040] my-2"></p>
+          <p class="text-[#737373] text-[14px] md:text-[16px] text-center">
+            The gradual <br>
+            accumulation of <br>
+            information about
+          </p>
+        </div>
+        <!-- card--3 -->
+        <div class="w-full md:w-[45%] lg:w-[350px] h-[300px] bg-white shadow-md p-6 flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300">
+          <img src=".vscode/images/OurActivityImg/009-web.png" alt="" class="mb-4">
+          <p class="text-lg font-bold text-[#252B42] text-center">Emergency Case</p>
+          <p class="w-20 h-1 bg-[#E74040] my-2"></p>
+          <p class="text-[#737373] text-[14px] md:text-[16px] text-center">
+            The gradual <br>
+            accumulation of <br>
+            information about
+          </p>
+        </div>
+       </div>
+       </div>
+    <!---Leading Medicine-->
+    <div class="bg-[#FFDCD1] py-10 px-4 my-10 md:px-20 lg:w-full lg:h-[560px] lg:mt-28">
+      <div class="flex flex-wrap lg:flex-nowrap items-center max-w-7xl mx-auto">
+        <!-- Text section -->
+        <div class="text-[35px] md:text-[55px] lg:text-[65px] mb-4 text-center lg:text-start sm:text-center lg:mb-0 lg:mx-5 lg:px-[3rem]">
+          <p class="w-20 h-1 bg-[#E74040] my-2"></p>
+          <p class="text-[#252B42] font-bold text-[30px] md:text-[45px] mb-4">Leading Medicine</p>
+          <p class="text-[#737373] text-[16px] md:text-[20px] mb-4">
+            Problems trying to resolve the conflict between <br>  
+            the two major realms of Classical physics: <br> 
+            Newtonian mechanics
+          </p>
+          <a href="#" class="text-[#23A6F0] inline-flex items-center text-[16px] md:text-[18px]">
+            Learn More
+          </a>
+          <svg class="h-6 w-6 ml-2" viewBox="0 0 42 54">
+            <polygon points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256"></polygon>
+          </svg>
+        </div>
+        
+        <!-- Image Section -->
+        <div class="relative mx-auto lg:ml-[12rem]">
+          <!-- Main image -->
+          <img src=".vscode/images/LeadingMedImg/leadingMed.png" alt="Main Image" class="w-full max-w-[550px] lg:max-w-[700px] h-auto">
+          
+          <!-- HeroImage3 (Aligned to the right and responsive) -->
+          <img src=".vscode/images/HeroSectionImg/HeroImage3.png" alt="Hero Image 3"
+          class="absolute w-[30%] sm:w-[25%] md:w-[20%] lg:w-[200px] top-2 right-5 sm:right-10 md:right-20 lg:right-0 object-contain">
+        
+          <!-- HeroImage2 (Responsive and aligned) -->
+          <img src=".vscode/images/HeroSectionImg/HeroImage2.png" alt="Hero Image 2"
+            class="absolute w-[40%] sm:w-[35%] md:w-[30%] lg:w-[390px] top-[21rem] left-10 sm:left-[10%] md:left-[15%] lg:left-[20%]">
+        </div>
+      </div>
+    </div>
+
+    <!---Doctor Special-->
+    <div class="max-w-[78rem] mx-auto my-8 px-4 lg:mt-28">
+      <!-- Title and Description Section -->
+      <div class="text-[35px] mb-4 text-center  sm:text-center lg:text-left my-8 mx-10">
+        <p class="text-[#23A6F0] font-bold text-[18px] sm:text-[12px]">Practice Advice</p>
+        <p class="text-[#252B42] font-bold text-[45px] mb-4">Our Doctors Specialize in You</p>
+        <p class="text-[#737373] text-[20px] mb-4">Problems trying to resolve the conflict between<br>
+          the two major realms of Classical physics: Newtonian mechanics</p>
+      </div>
+    
+      <!-- Flex container for the cards -->
+      <div class="flex flex-wrap justify-center lg:justify-between gap-4 lg:px-[43px]">
+        <!-- Card 1 -->
+        <div class="w-full  sm:w-[348px] h-[675px] my-10 bg-white shadow-md hover:scale-105 transition-transform duration-700 hover:shadow-lg">
+          <img src=".vscode/images/DoctorSpeImg/fixed-height.png" alt="" class="mb-4 w-full  h-[300px]">
+          <div class="px-4">
+            <p class="text-lg font-bold mb-2 text-[#23A6F0]">English Department</p>
+            <p class="text-lg font-bold mb-2 text-[#252B42]">Graphic Design</p>
+            <p class="text-md text-[#737373] mb-4">We focus on ergonomics and meeting <br>
+              you where you work. It's only a <br> keystroke away.</p>
+            <span class="flex items-center">
+              <svg class="h-5 w-5 text-gray-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
+              <p class="text-[#737373] font-bold px-2 mb-4">15 Sales</p>
+            </span>
+            <p class="text-[#BDBDBD] font-bold mb-4">$16.48<a class="text-[#40BB15] px-2 font-bold">$6.48</a></p>
+            <p class="text-[#737373] mb-4">22hr 30min<a class="text-[#737373] px-5">64 Lessons</a><a class="text-[#737373] px-5">Progress</a></p>
+            <button class="px-6 py-2 rounded-3xl text-[#23A6F0] border border-[#23A6F0] font-bold">Learn More</button>
+          </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="w-full sm:w-[348px] h-[675px] my-10 bg-white shadow-md hover:scale-105 transition-transform duration-700 hover:shadow-lg">
+          <img src=".vscode/images/DoctorSpeImg/product-cover-125 sec-.png" alt="" class="mb-4 w-full h-[300px]">
+          <div class="px-4">
+            <p class="text-lg font-bold mb-2 text-[#23A6F0]">English Department</p>
+            <p class="text-lg font-bold mb-2 text-[#252B42]">Graphic Design</p>
+            <p class="text-md text-[#737373] mb-4">We focus on ergonomics and meeting <br>
+              you where you work. It's only a <br> keystroke away.</p>
+            <span class="flex items-center">
+              <svg class="h-5 w-5 text-gray-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
+              <p class="text-[#737373] font-bold px-2 mb-4">15 Sales</p>
+            </span>
+            <p class="text-[#BDBDBD] font-bold mb-4">$16.48<a class="text-[#40BB15] px-2 font-bold">$6.48</a></p>
+            <p class="text-[#737373] mb-4">22hr 30min<a class="text-[#737373] px-5">64 Lessons</a><a class="text-[#737373] px-5">Progress</a></p>
+            <button class="px-6 py-2 rounded-3xl text-[#23A6F0] border border-[#23A6F0] font-bold">Learn More</button>
+          </div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="w-full m-0  sm:w-[348px] h-[675px] my-10 bg-white shadow-md hover:scale-105 transition-transform duration-700 hover:shadow-lg">
+          <img src=".vscode/images/DoctorSpeImg/product-cover-126 sec-.png" alt="" class="mb-4 w-full h-[300px]">
+          <div class="px-4">
+            <p class="text-lg font-bold mb-2 text-[#23A6F0]">English Department</p>
+            <p class="text-lg font-bold mb-2 text-[#252B42]">Graphic Design</p>
+            <p class="text-md text-[#737373] mb-4">We focus on ergonomics and meeting <br>
+              you where you work. It's only a <br> keystroke away.</p>
+            <span class="flex items-center">
+              <svg class="h-5 w-5 text-gray-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
+              <p class="text-[#737373] font-bold px-2 mb-4">15 Sales</p>
+            </span>
+            <p class="text-[#BDBDBD] font-bold mb-4">$16.48<a class="text-[#40BB15] px-2 font-bold">$6.48</a></p>
+            <p class="text-[#737373] mb-4">22hr 30min<a class="text-[#737373] px-5">64 Lessons</a><a class="text-[#737373] px-5">Progress</a></p>
+            <button class="px-6 py-2 rounded-3xl text-[#23A6F0] border border-[#23A6F0] font-bold">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!--Pricing-->
+  <div class="max-w-[78rem] mx-auto my-8 px-4 lg:px-[4rem] lg:mt-28">
+    <!-- Title and Description Section -->
+    <div class="text-center lg:text-left mb-10">
+      <p class="text-[#23A6F0] font-bold text-[18px]">Practice Advice</p>
+      <p class="text-[#252B42] font-bold text-[45px] mb-4">Pricing</p>
+      <p class="text-[#737373] text-[20px] mb-4">Problems trying to resolve the conflict between<br>
+        the two major realms of Classical physics: Newtonian mechanics</p>
+    </div>
+  
+    <!-- Pricing Cards Section (Flex Container) -->
+    <div class="flex flex-wrap lg:flex-row justify-center lg:justify-between gap-8 ">
+      <!-- Card 1 -->
+      <div class="w-full sm:w-[348px] h-auto my-8 p-10 bg-white shadow-md hover:scale-105 transition-transform duration-700 hover:shadow-lg">
+        <img src=".vscode/images/circle sec-.png" alt="Card 1" class="mb-4">
+        <div class="p-5">
+          <p class="font-bold text-lg">Free</p>
+          <p class="text-[#737373] py-4">Organize across all apps by hand</p>
+          <span class="text-[#23A6F0] font-bold text-[35px] py-4">$19</span>
+          <p class="text-md text-[#8EC2F2]">Per Month</p>
+          <p class="text-[#737373] py-4">Slate helps you see how many more days you need...</p>
+          <div class="py-4">
+            <button class="px-16 py-4 text-white rounded border border-[#23A6F0] font-bold bg-[#23A6F0]">Try For Free</button>
+          </div>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #2dc071;"></i>
+            <p class="text-[#252B42] font-semibold">Unlimited product updates</p>
+          </span>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #2dc071;"></i>
+            <p class="text-[#252B42] font-semibold">Unlimited product updates</p>
+          </span>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #2dc071;"></i>
+            <p class="text-[#252B42] font-semibold">Unlimited product updates</p>
+          </span>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #bdbdbd;"></i>
+            <p class="text-[#252B42] font-semibold">1GB Cloud Storage</p>
+          </span>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #bdbdbd;"></i>
+            <p class="text-[#252B42] font-semibold">Email and community</p>
+          </span>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="w-full sm:w-[348px] h-auto my-8 p-10 bg-white shadow-md hover:scale-105 transition-transform duration-700 hover:shadow-lg">
+        <img src=".vscode/images/circle sec-.png" alt="Card 2" class="mb-4">
+        <div class="p-5">
+          <p class="font-bold text-lg">Free</p>
+          <p class="text-[#737373] py-4">Organize across all apps by hand</p>
+          <span class="text-[#23A6F0] font-bold text-[35px] py-4">$19</span>
+          <p class="text-md text-[#8EC2F2]">Per Month</p>
+          <p class="text-[#737373] py-4">Slate helps you see how many more days you need...</p>
+          <div class="py-4">
+            <button class="px-16 py-4 text-white rounded border border-[#23A6F0] font-bold bg-[#23A6F0]">Try For Free</button>
+          </div>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #2dc071;"></i>
+            <p class="text-[#252B42] font-semibold">Unlimited product updates</p>
+          </span>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #2dc071;"></i>
+            <p class="text-[#252B42] font-semibold">Unlimited product updates</p>
+          </span>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #2dc071;"></i>
+            <p class="text-[#252B42] font-semibold">Unlimited product updates</p>
+          </span>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #bdbdbd;"></i>
+            <p class="text-[#252B42] font-semibold">1GB Cloud Storage</p>
+          </span>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #bdbdbd;"></i>
+            <p class="text-[#252B42] font-semibold">Email and community</p>
+          </span>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="w-full sm:w-[348px] h-auto my-8 p-10 bg-white shadow-md hover:scale-105 transition-transform duration-700 hover:shadow-lg">
+        <img src=".vscode/images/circle sec-.png" alt="Card 3" class="mb-4">
+        <div class="p-5">
+          <p class="font-bold text-lg">Free</p>
+          <p class="text-[#737373] py-4">Organize across all apps by hand</p>
+          <span class="text-[#23A6F0] font-bold text-[35px] py-4">$19</span>
+          <p class="text-md text-[#8EC2F2]">Per Month</p>
+          <p class="text-[#737373] py-4">Slate helps you see how many more days you need...</p>
+          <div class="py-4">
+            <button class="px-16 py-4 text-white rounded border border-[#23A6F0] font-bold bg-[#23A6F0]">Try For Free</button>
+          </div>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #2dc071;"></i>
+            <p class="text-[#252B42] font-semibold">Unlimited product updates</p>
+          </span>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #2dc071;"></i>
+            <p class="text-[#252B42] font-semibold">Unlimited product updates</p>
+          </span>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #2dc071;"></i>
+            <p class="text-[#252B42] font-semibold">Unlimited product updates</p>
+          </span>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #bdbdbd;"></i>
+            <p class="text-[#252B42] font-semibold">1GB Cloud Storage</p>
+          </span>
+          <span class="flex items-center py-4">   
+            <i class="fa-solid fa-circle-check fa-xl pr-2" style="color: #bdbdbd;"></i>
+            <p class="text-[#252B42] font-semibold">Email and community</p>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+<!--client-->
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto lg:px-[5rem] lg:mt-28">
+  <div class="my-8">
+    <div class="text text-center sm:text-center lg:text-start">
+    <p class="text-[#23A6F0] font-bold text-[18px]">Practice Advice</p>
+    <p class="text-[#252B42] font-bold text-[30px] md:text-[45px] mb-4">Each and every client is important</p>
+    <p class="text-[#737373] text-[16px] md:text-[20px] mb-4">
+      Problems trying to resolve the conflict between
+      the two major realms of Classical physics: Newtonian mechanics
+    </p>
+  </div>
+    <div class="flex flex-col md:flex-row items-center gap-y-8 md:gap-x-8 lg:gap-x-18 ">
+      <!-- First Card -->
+      <div class="my-8 text-center px-6 py-8 w-[350px] h-[338px] bg-white shadow-lg mx-auto md:mx-0">
+        <svg class="mx-auto mb-4" version="1.1" xmlns="http://www.w3.org/2000/svg" width="131" height="23">
+          <path d="M0 0 C1.70840281 1.63412443 2.93453047 2.86906094 4 5 C5.97888961 5.72693904 7.97954558 6.39816251 10 7 C9.690625 7.5775 9.38125 8.155 9.0625 8.75 C7.24993954 12.58836333 6.88236552 15.76515874 7 20 C6.236875 19.67 5.47375 19.34 4.6875 19 C0.41535909 17.41036617 -1.95586595 18.25118528 -6 20 C-5.938125 18.741875 -5.87625 17.48375 -5.8125 16.1875 C-5.72774237 12.88391122 -5.72774237 12.88391122 -7.5 10.1875 C-7.995 9.795625 -8.49 9.40375 -9 9 C-9 8.01 -9 7.02 -9 6 C-8.071875 5.938125 -7.14375 5.87625 -6.1875 5.8125 C-2.8109337 5.31172896 -2.8109337 5.31172896 -1.125 2.4375 C-0.75375 1.633125 -0.3825 0.82875 0 0 Z" fill="#F2CC02" transform="translate(92,1)"/>
+          <path d="M0 0 C1.70840281 1.63412443 2.93453047 2.86906094 4 5 C5.97888961 5.72693904 7.97954558 6.39816251 10 7 C9.690625 7.5775 9.38125 8.155 9.0625 8.75 C7.24993954 12.58836333 6.88236552 15.76515874 7 20 C6.236875 19.67 5.47375 19.34 4.6875 19 C0.41535909 17.41036617 -1.95586595 18.25118528 -6 20 C-5.938125 18.741875 -5.87625 17.48375 -5.8125 16.1875 C-5.72774237 12.88391122 -5.72774237 12.88391122 -7.5 10.1875 C-7.995 9.795625 -8.49 9.40375 -9 9 C-9 8.01 -9 7.02 -9 6 C-8.071875 5.938125 -7.14375 5.87625 -6.1875 5.8125 C-2.8109337 5.31172896 -2.8109337 5.31172896 -1.125 2.4375 C-0.75375 1.633125 -0.3825 0.82875 0 0 Z" fill="#F2CC02" transform="translate(65,1)"/>
+          <path d="M0 0 C1.70840281 1.63412443 2.93453047 2.86906094 4 5 C5.97888961 5.72693904 7.97954558 6.39816251 10 7 C9.690625 7.5775 9.38125 8.155 9.0625 8.75 C7.24993954 12.58836333 6.88236552 15.76515874 7 20 C6.236875 19.67 5.47375 19.34 4.6875 19 C0.41535909 17.41036617 -1.95586595 18.25118528 -6 20 C-5.938125 18.741875 -5.87625 17.48375 -5.8125 16.1875 C-5.72774237 12.88391122 -5.72774237 12.88391122 -7.5 10.1875 C-7.995 9.795625 -8.49 9.40375 -9 9 C-9 8.01 -9 7.02 -9 6 C-8.071875 5.938125 -7.14375 5.87625 -6.1875 5.8125 C-2.8109337 5.31172896 -2.8109337 5.31172896 -1.125 2.4375 C-0.75375 1.633125 -0.3825 0.82875 0 0 Z" fill="#F2CC02" transform="translate(38,1)"/>
+        </svg>
+        <p class="text-[#737373] text-[16px] text sm:text-center md:text-[18px]">
+          Slate helps you see <br>
+          how many more days  <br>
+          you need to work to  <br>
+          reach your financial  <br>
+          goal for the month  <br>
+          and year.
+        </p>
+        <div class="flex items-center py-6 gap-x-4 justify-center">
+          <img class="w-[60px] h-[60px]" src=".vscode/images/circle.png" alt="User Image">
+          <p class="text-start text-[#23A6F0]">Regina Miles <br> <span class="text-[#737373] text-[14px]">Designer</span></p>
+        </div>
+      </div>
+
+      <!-- Second Card -->
+      <div class="my-8 text-center px-6 py-8 w-[350px] h-[338px] bg-white shadow-lg mx-auto md:mx-0">
+        <svg class="mx-auto mb-4" version="1.1" xmlns="http://www.w3.org/2000/svg" width="131" height="23">
+          <path d="M0 0 C1.70840281 1.63412443 2.93453047 2.86906094 4 5 C5.97888961 5.72693904 7.97954558 6.39816251 10 7 C9.690625 7.5775 9.38125 8.155 9.0625 8.75 C7.24993954 12.58836333 6.88236552 15.76515874 7 20 C6.236875 19.67 5.47375 19.34 4.6875 19 C0.41535909 17.41036617 -1.95586595 18.25118528 -6 20 C-5.938125 18.741875 -5.87625 17.48375 -5.8125 16.1875 C-5.72774237 12.88391122 -5.72774237 12.88391122 -7.5 10.1875 C-7.995 9.795625 -8.49 9.40375 -9 9 C-9 8.01 -9 7.02 -9 6 C-8.071875 5.938125 -7.14375 5.87625 -6.1875 5.8125 C-2.8109337 5.31172896 -2.8109337 5.31172896 -1.125 2.4375 C-0.75375 1.633125 -0.3825 0.82875 0 0 Z" fill="#F2CC02" transform="translate(92,1)"/>
+          <path d="M0 0 C1.70840281 1.63412443 2.93453047 2.86906094 4 5 C5.97888961 5.72693904 7.97954558 6.39816251 10 7 C9.690625 7.5775 9.38125 8.155 9.0625 8.75 C7.24993954 12.58836333 6.88236552 15.76515874 7 20 C6.236875 19.67 5.47375 19.34 4.6875 19 C0.41535909 17.41036617 -1.95586595 18.25118528 -6 20 C-5.938125 18.741875 -5.87625 17.48375 -5.8125 16.1875 C-5.72774237 12.88391122 -5.72774237 12.88391122 -7.5 10.1875 C-7.995 9.795625 -8.49 9.40375 -9 9 C-9 8.01 -9 7.02 -9 6 C-8.071875 5.938125 -7.14375 5.87625 -6.1875 5.8125 C-2.8109337 5.31172896 -2.8109337 5.31172896 -1.125 2.4375 C-0.75375 1.633125 -0.3825 0.82875 0 0 Z" fill="#F2CC02" transform="translate(65,1)"/>
+          <path d="M0 0 C1.70840281 1.63412443 2.93453047 2.86906094 4 5 C5.97888961 5.72693904 7.97954558 6.39816251 10 7 C9.690625 7.5775 9.38125 8.155 9.0625 8.75 C7.24993954 12.58836333 6.88236552 15.76515874 7 20 C6.236875 19.67 5.47375 19.34 4.6875 19 C0.41535909 17.41036617 -1.95586595 18.25118528 -6 20 C-5.938125 18.741875 -5.87625 17.48375 -5.8125 16.1875 C-5.72774237 12.88391122 -5.72774237 12.88391122 -7.5 10.1875 C-7.995 9.795625 -8.49 9.40375 -9 9 C-9 8.01 -9 7.02 -9 6 C-8.071875 5.938125 -7.14375 5.87625 -6.1875 5.8125 C-2.8109337 5.31172896 -2.8109337 5.31172896 -1.125 2.4375 C-0.75375 1.633125 -0.3825 0.82875 0 0 Z" fill="#F2CC02" transform="translate(38,1)"/>
+        </svg>
+        <p class="text-[#737373] text-[16px] md:text-[18px]">
+          Slate helps you see <br>
+          how many more days  <br>
+          you need to work to  <br>
+          reach your financial  <br>
+          goal for the month  <br>
+          and year.
+        </p>
+        <div class="flex items-center py-6 gap-x-4 justify-center">
+          <img class="w-[60px] h-[60px]" src=".vscode/images/circle.png" alt="User Image">
+          <p class="text-start text-[#23A6F0]">Regina Miles <br> <span class="text-[#737373] text-[14px]">Designer</span></p>
+        </div>
+      </div>
+
+      <!-- Third Card -->
+      <div class="my-8 text-center px-6 py-8 w-[350px] h-[338px] bg-white shadow-lg mx-auto md:mx-0">
+        <svg class="mx-auto mb-4" version="1.1" xmlns="http://www.w3.org/2000/svg" width="131" height="23">
+          <path d="M0 0 C1.70840281 1.63412443 2.93453047 2.86906094 4 5 C5.97888961 5.72693904 7.97954558 6.39816251 10 7 C9.690625 7.5775 9.38125 8.155 9.0625 8.75 C7.24993954 12.58836333 6.88236552 15.76515874 7 20 C6.236875 19.67 5.47375 19.34 4.6875 19 C0.41535909 17.41036617 -1.95586595 18.25118528 -6 20 C-5.938125 18.741875 -5.87625 17.48375 -5.8125 16.1875 C-5.72774237 12.88391122 -5.72774237 12.88391122 -7.5 10.1875 C-7.995 9.795625 -8.49 9.40375 -9 9 C-9 8.01 -9 7.02 -9 6 C-8.071875 5.938125 -7.14375 5.87625 -6.1875 5.8125 C-2.8109337 5.31172896 -2.8109337 5.31172896 -1.125 2.4375 C-0.75375 1.633125 -0.3825 0.82875 0 0 Z" fill="#F2CC02" transform="translate(92,1)"/>
+          <path d="M0 0 C1.70840281 1.63412443 2.93453047 2.86906094 4 5 C5.97888961 5.72693904 7.97954558 6.39816251 10 7 C9.690625 7.5775 9.38125 8.155 9.0625 8.75 C7.24993954 12.58836333 6.88236552 15.76515874 7 20 C6.236875 19.67 5.47375 19.34 4.6875 19 C0.41535909 17.41036617 -1.95586595 18.25118528 -6 20 C-5.938125 18.741875 -5.87625 17.48375 -5.8125 16.1875 C-5.72774237 12.88391122 -5.72774237 12.88391122 -7.5 10.1875 C-7.995 9.795625 -8.49 9.40375 -9 9 C-9 8.01 -9 7.02 -9 6 C-8.071875 5.938125 -7.14375 5.87625 -6.1875 5.8125 C-2.8109337 5.31172896 -2.8109337 5.31172896 -1.125 2.4375 C-0.75375 1.633125 -0.3825 0.82875 0 0 Z" fill="#F2CC02" transform="translate(65,1)"/>
+          <path d="M0 0 C1.70840281 1.63412443 2.93453047 2.86906094 4 5 C5.97888961 5.72693904 7.97954558 6.39816251 10 7 C9.690625 7.5775 9.38125 8.155 9.0625 8.75 C7.24993954 12.58836333 6.88236552 15.76515874 7 20 C6.236875 19.67 5.47375 19.34 4.6875 19 C0.41535909 17.41036617 -1.95586595 18.25118528 -6 20 C-5.938125 18.741875 -5.87625 17.48375 -5.8125 16.1875 C-5.72774237 12.88391122 -5.72774237 12.88391122 -7.5 10.1875 C-7.995 9.795625 -8.49 9.40375 -9 9 C-9 8.01 -9 7.02 -9 6 C-8.071875 5.938125 -7.14375 5.87625 -6.1875 5.8125 C-2.8109337 5.31172896 -2.8109337 5.31172896 -1.125 2.4375 C-0.75375 1.633125 -0.3825 0.82875 0 0 Z" fill="#F2CC02" transform="translate(38,1)"/>
+        </svg>
+        <p class="text-[#737373] text-[16px] md:text-[18px]">
+          Slate helps you see <br>
+          how many more days  <br>
+          you need to work to  <br>
+          reach your financial  <br>
+          goal for the month  <br>
+          and year.
+        </p>
+        <div class="flex items-center py-6 gap-x-4 justify-center">
+          <img class="w-[60px] h-[60px]" src=".vscode/images/circle.png" alt="User Image">
+          <p class="text-start text-[#23A6F0]">Regina Miles <br> <span class="text-[#737373] text-[14px]">Designer</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Join us-->
+<div class="flex justify-center items-center max-w-7xl mx-auto text-center px-4 lg:mt-28">
+  <div class="w-full max-w-3xl">
+    <p class="text-[#23A6F0] font-bold text-[18px]">Newsletter</p>
+    <p class="text-[#252B42] font-bold text-[30px] sm:text-[40px] md:text-[45px] mb-4">JOIN US</p>
+    <p class="text-[#737373] text-[16px] sm:text-[18px] md:text-[20px] mb-4">
+      Problems trying to resolve the conflict between<br> 
+      the two major realms of Classical physics: Newtonian mechanics
+    </p>
+    <div class="flex flex-col sm:flex-row items-center mt-8 lg:ml-24">
+      <input class="outline rounded-sm outline-gray-200 outline-2 w-full sm:w-[460px] p-2 bg-[#F9F9F9]" type="email" placeholder="Your Email">
+      <button class="rounded-sm text-white bg-[#23A6F0] w-full sm:w-[100px] p-2 mt-4 sm:mt-0 sm:ml-4">
+        Subscribe
+      </button>
+    </div>
+  </div>
+</div>
+  </div>
+  </div>
+<!--Footer-->
+<footer class="text-[#737373] py-0 lg:mt-28 bg-white">
+  <!-- Footer Content -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 gap-x-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-8 lg:gap-y-0">
+    <!-- Column 1 -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-[#252B42]">About Us</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline">Who We Are</a></li>
+        <li><a href="#" class="hover:underline">Our Team</a></li>
+        <li><a href="#" class="hover:underline">Careers</a></li>
+        <li><a href="#" class="hover:underline">Press</a></li>
+        <li><a href="#" class="hover:underline">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 2 -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-[#252B42]">Services</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline">Consultation</a></li>
+        <li><a href="#" class="hover:underline">Support</a></li>
+        <li><a href="#" class="hover:underline">Custom Solutions</a></li>
+        <li><a href="#" class="hover:underline">API Integration</a></li>
+        <li><a href="#" class="hover:underline">Training</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-[#252B42]">Resources</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline">Documentation</a></li>
+        <li><a href="#" class="hover:underline">FAQs</a></li>
+        <li><a href="#" class="hover:underline">Community Forum</a></li>
+        <li><a href="#" class="hover:underline">Tutorials</a></li>
+        <li><a href="#" class="hover:underline">Case Studies</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-[#252B42]">Contact</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline">Email Us</a></li>
+        <li><a href="#" class="hover:underline">Call Support</a></li>
+        <li><a href="#" class="hover:underline">Office Locations</a></li>
+        <li><a href="#" class="hover:underline">Feedback</a></li>
+        <li><a href="#" class="hover:underline">Partnerships</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 5 -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-[#252B42]">Follow Us</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline">Facebook</a></li>
+        <li><a href="#" class="hover:underline">Twitter</a></li>
+        <li><a href="#" class="hover:underline">LinkedIn</a></li>
+        <li><a href="#" class="hover:underline">Instagram</a></li>
+        <li><a href="#" class="hover:underline">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Footer Bottom -->
+  <div class="flex mb-0 justify-center items-center space-x-4 py-2 bg-slate-200">
+    <a href="#" class="text-gray-600 hover:text-[#23A6F0]">
+      <i class="fa-brands fa-facebook text-xl"></i>
+    </a>
+    <a href="#" class="text-gray-600 hover:text-[#23A6F0]">
+      <i class="fa-brands fa-instagram text-xl"></i>
+    </a>
+    <a href="#" class="text-gray-600 hover:text-[#23A6F0]">
+      <i class="fa-brands fa-whatsapp text-xl"></i>
+    </a>
+  </div>
+</footer>
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const dropdown = document.getElementById('dropdown');
+
+  menuToggle.addEventListener('click', () => {
+    dropdown.classList.toggle('hidden');
+  });
+</script>
+</body>
+</html>
